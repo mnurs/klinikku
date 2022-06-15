@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/home/home.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'dart:async';
 import 'dart:convert';
@@ -22,7 +23,7 @@ class _LoginRMState extends State<LoginRM> {
 
 
   signIn(String nrm, String tanggal_lahir){
-    // Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:klinikku/home/slider.dart';
+import 'package:klinikku/produk/kategori.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         SliderPage(),
         // Pesan(),
         // Promo(),
-        // Category()
+        Category()
       ].elementAt(_selectedTabIndex),
       bottomNavigationBar: SafeArea(
         child: _bottomNavBar,

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
+import 'package:klinikku/home/home.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -17,7 +18,7 @@ class _LoginHPState extends State<LoginHP> {
   final phoneNumberValue = TextEditingController();
 
   signIn(String hp, String tanggal_lahir){
-     // Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+     Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
 

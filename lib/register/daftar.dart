@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/home/home.dart';
 import 'package:klinikku/model/Combobox.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -47,7 +48,7 @@ class _PendaftaranState extends State<Pendaftaran> {
 
   saveOrUpdate() async {
     await Alert(context: context, title: "Success",type:AlertType.info, desc: "Berhasil Daftar").show();
-    // Navigator.pushReplacement(context,  MaterialPageRoute(builder: (context) => new HomePage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
   @override

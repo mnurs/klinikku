@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.1.3
   rflutter_alert: ^2.0.4
   card_swiper: ^2.0.4
+  image_picker: ^0.8.5+3
 
 
 dev_dependencies:
@@ -91,6 +92,11 @@ flutter:
     - img/jasa/9.png
     - img/jasa/10.png
     - img/BG.png
+    - img/upload.png
+    - img/contoh_struk_transfer.jpg
+    - img/bank/bca.png
+    - img/bank/bni.png
+    - img/bank/mandiri.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

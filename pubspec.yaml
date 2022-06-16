@@ -97,6 +97,16 @@ flutter:
     - img/bank/bca.png
     - img/bank/bni.png
     - img/bank/mandiri.png
+    - img/produk/1.jpg
+    - img/produk/2.jpg
+    - img/produk/3.jpg
+    - img/produk/4.jpg
+    - img/produk/5.jpg
+    - img/produk/6.jpg
+    - img/produk/7.jpg
+    - img/produk/8.jpg
+    - img/produk/9.jpg
+    - img/produk/10.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

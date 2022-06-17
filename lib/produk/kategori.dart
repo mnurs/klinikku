@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:klinikku/home/drawer.dart';
+import 'package:klinikku/produk/list.dart';
 
 class KategoriProduk extends StatefulWidget {
   @override
@@ -41,9 +42,10 @@ class _KategoriProdukState extends State<KategoriProduk> {
                 padding: EdgeInsets.all(10.0),
                 child: InkWell(
                   onTap: () {
-
-                    // var route = new MaterialPageRoute(builder: (BuildContext context) => new Product());
-                    // Navigator.of(context).push(route);
+                    var route = new MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                        new ListProduk());
+                    Navigator.of(context).push(route);
                   },
                   child: Card(
                     child: Stack(

@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:klinikku/home/drawer.dart';
 
-class Category extends StatefulWidget {
+class KategoriProduk extends StatefulWidget {
   @override
-  _CategoryState createState() => _CategoryState();
+  _KategoriProdukState createState() => _KategoriProdukState();
 }
 
-class _CategoryState extends State<Category> {
+class _KategoriProdukState extends State<KategoriProduk> {
   List namaProduk = ["Pembersih Wajah","Krim Pagi & Krim Malam","Serum", "Perawatan Tubuh", "Produk Dekoratif","Masker","Perawatan Rambut"];
   List gambarProduk = ["img/meta/1.jpg","img/meta/2.jpg","img/meta/3.jpg","img/meta/4.jpg","img/meta/5.jpg","img/meta/6.jpg","img/meta/7.jpg"];
 

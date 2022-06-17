@@ -335,7 +335,7 @@ class _KonfirmasiPembayaranState extends State<KonfirmasiPembayaran> {
                 ),
                 Expanded(
                     child: Container(
-                        child: Text("Rp. 200.000",style: TextStyle(
+                        child: Text("Rp. 60.564",style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.pink
                         ),textAlign: TextAlign.right,)
@@ -489,7 +489,7 @@ class _KonfirmasiPembayaranState extends State<KonfirmasiPembayaran> {
                 Expanded(
                     child: Container(
                         padding: EdgeInsets.only(right: 10,top: 10),
-                        child: Text("Rp. 200.000",style: TextStyle(
+                        child: Text("Rp. 60.564",style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.pink
                         ),textAlign: TextAlign.right,)

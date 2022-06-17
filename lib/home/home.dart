@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         SliderPage(),
         // Pesan(),
         // Promo(),
-        Category()
+        KategoriProduk()
       ].elementAt(_selectedTabIndex),
       bottomNavigationBar: SafeArea(
         child: _bottomNavBar,

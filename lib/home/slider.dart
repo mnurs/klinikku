@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:klinikku/home/app_bar.dart';
 import 'package:klinikku/home/drawer.dart';
+import 'package:klinikku/produk/kategori.dart';
 
 class SliderPage extends StatefulWidget {
   @override
@@ -112,7 +113,10 @@ class _SliderPageState extends State<SliderPage> {
           InkWell(
             onTap: () {
               setState(() {
-                Navigator.of(context).pushNamed("/Category");
+                var route = new MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                    new KategoriProduk());
+                Navigator.of(context).push(route);
               });
             },
             child: new Text(
@@ -141,13 +145,6 @@ class _SliderPageState extends State<SliderPage> {
                       child:
                       Image.asset(gambarProduk[index],
                         fit: BoxFit.contain,)
-                      // CachedNetworkImage(
-                      //   placeholder: (context, url) =>
-                      //       CircularProgressIndicator(),
-                      //   imageUrl: StoragePrefix.BaseUrl +
-                      //       '${categoryData[index]["lokasi_penyimpanan"]}',
-                      //   fit: BoxFit.cover,
-                      // ),
                     ),
                   ),
                 ),

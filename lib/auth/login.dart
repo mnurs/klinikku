@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:klinikku/auth/login_hp.dart';
 import 'package:klinikku/auth/login_rm.dart';
+import 'package:klinikku/home/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -108,7 +109,10 @@ class _LoginPageState extends State<LoginPage> {
           child: FloatingActionButton(
             heroTag: "StayHomeStaySafe",
             onPressed: (){
-              Navigator.of(context).pushReplacementNamed("/Home");
+              var route = new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new HomePage());
+              Navigator.of(context).push(route);
             },
             backgroundColor: Colors.green[600],
             child: Icon(Icons.home),

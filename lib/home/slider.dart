@@ -6,6 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:klinikku/home/app_bar.dart';
 import 'package:klinikku/home/drawer.dart';
 import 'package:klinikku/produk/kategori.dart';
+import 'package:klinikku/produk/list.dart';
 
 class SliderPage extends StatefulWidget {
   @override
@@ -183,7 +184,10 @@ class _SliderPageState extends State<SliderPage> {
               ],
             ),
             onTap: () {
-
+              var route = new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new ListProduk());
+              Navigator.of(context).push(route);
             },
           );
         },

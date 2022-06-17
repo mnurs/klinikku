@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:klinikku/home/app_bar.dart';
 
-class Product extends StatefulWidget {
+class ListProduk extends StatefulWidget {
   @override
-  _ProductState createState() => _ProductState();
+  _ListProdukState createState() => _ListProdukState();
 }
 
-class _ProductState extends State<Product> {
+class _ListProdukState extends State<ListProduk> {
   List nama = ["CLEANSING MILK","FACIAL TONER","PURFING MILK","BRIGHTENING MILK","NORMAL SKIN FACIAL","FACIAL WASH OILY","2 IN CLEANSING","DAY CREAM","TABIR SURYA","MOISTURIZING"];
   List harga = ["50.000","60.000","55.000","65.000","40.000","50.000","60.000","55.000","65.000","40.000"];
   List gambar = ["img/produk/1.jpg","img/produk/2.jpg","img/produk/3.jpg","img/produk/4.jpg","img/produk/5.jpg","img/produk/6.jpg","img/produk/7.jpg","img/produk/8.jpg","img/produk/9.jpg","img/produk/10.jpg"];

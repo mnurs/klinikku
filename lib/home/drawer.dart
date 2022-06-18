@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:klinikku/history/index.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -158,7 +159,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => HistoriIndex()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HistoriIndex()));
               },
             ),
             ListTile(

@@ -39,13 +39,13 @@ class _CheckoutState extends State<Checkout> {
   List<Combobox> _listCabang = [new Combobox("Pekalongan","PK"),new Combobox("Smarang","SN"),new Combobox("Solo","SL")];
 
   List diskonProduk = [0];
-  List diskonJasa = [];
-  List namaJasa = [];
   List namaProduk = ["Day Cream"];
   List hargaProduks = ["60.000"];
   List hargaDiskonProduk = ["0"];
   List gambarProduk = ["img/produk/1.jpg"];
   List jumlahProduk = [1];
+  List diskonJasa = [];
+  List namaJasa = [];
   List hargaJasas = [];
   List hargaDiskonJasa = [];
   List gambarJasa = [];

@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/config/config.dart';
+import 'package:klinikku/detail_histori/rincian_pesanan.dart';
 import 'package:klinikku/history/index.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -85,7 +87,7 @@ class Dikirim extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return InkWell(
                 onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: StoragePrefix.StatusDikirim,idPesanan: _listHistory[index]['id_pesanan'].toString())));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: Config.StatusDikirim)));
                 },
                 child: Card(
                   child: Padding(

@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/config/config.dart';
+import 'package:klinikku/detail_histori/rincian_pesanan.dart';
 
 class Selesai extends StatelessWidget {
 
@@ -140,7 +142,7 @@ class Selesai extends StatelessWidget {
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
                             onTap: (){
-                              // Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: StoragePrefix.StatusSelesai,idPesanan: _listHistory[index]['id_pesanan'].toString())));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: Config.StatusSelesai)));
                             },
                             child: Card(
                               child: Padding(
@@ -321,7 +323,7 @@ class Selesai extends StatelessWidget {
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
                             onTap: (){
-                              // Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: StoragePrefix.StatusSelesai,idPesanan: _listHistoryKonsul[index]['id_pesanan'].toString())));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPesanan(status: Config.StatusSelesai)));
                             },
                             child: Card(
                               child: Padding(

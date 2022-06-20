@@ -7,6 +7,8 @@ import 'package:klinikku/home/app_bar.dart';
 import 'package:klinikku/home/drawer.dart';
 import 'package:klinikku/produk/kategori.dart';
 import 'package:klinikku/produk/list.dart';
+import 'package:klinikku/promo/detail.dart';
+import 'package:klinikku/promo/list_promo.dart';
 
 class SliderPage extends StatefulWidget {
   @override
@@ -20,6 +22,7 @@ class _SliderPageState extends State<SliderPage> {
   List namaDokter = ["dr. Damayanti, SpKK","dr. Ratna Wulansari","dr. Juwita Resty Hapsari"];
   List promo = ["img/promo_spesial/1.jpg","img/promo_spesial/2.jpg","img/promo_spesial/3.jpg","img/promo_spesial/4.jpg","img/promo_spesial/5.jpg","img/promo_spesial/6.jpg","img/promo_spesial/7.jpg","img/promo_spesial/8.jpg","img/promo_spesial/9.jpg"];
   List jasa = ["img/jasa/1.png","img/jasa/2.png","img/jasa/3.png","img/jasa/4.png","img/jasa/5.png","img/jasa/6.png","img/jasa/7.png","img/jasa/8.png","img/jasa/9.png","img/jasa/10.png"];
+  List dokter = ["img/dokter/1.png","img/dokter/3.png","img/dokter/2.png"];
 
   @override
   void initState() {
@@ -50,8 +53,8 @@ class _SliderPageState extends State<SliderPage> {
           ),
           InkWell(
             onTap: () {
-              // Navigator.pushReplacement(context, new MaterialPageRoute(
-              //     builder: (BuildContext context) => new ListPromo()));
+              Navigator.push(context, new MaterialPageRoute(
+                  builder: (BuildContext context) => new ListPromo()));
             },
             child: new Text(
               "Lihat semua",
@@ -72,14 +75,8 @@ class _SliderPageState extends State<SliderPage> {
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {
-              // var route = new MaterialPageRoute(
-              //     builder: (BuildContext context) =>
-              //     new PromoBannerDetail(
-              //       value: "${promoData[index]["id_promosi"]}",
-              //     ));
-              // Navigator.of(context).push(route);
-              //
-              // setState(() {});
+              Navigator.push(context, new MaterialPageRoute(
+                  builder: (BuildContext context) => new PromoBannerDetail()));
             },
             child: Image.asset(promo[index],
               fit: BoxFit.contain,)
@@ -247,10 +244,13 @@ class _SliderPageState extends State<SliderPage> {
             },
             child: new Column(
               children: <Widget>[
-                new Icon(
-                  Icons.account_circle,
-                  size: MediaQuery.of(context).size.height / 10,
+                new Image.asset(
+                  dokter[index],
+                  fit: BoxFit.contain,
+                  height: 90,
+                  width: 90,
                 ),
+
                 new Text(namaDokter[index], textAlign: TextAlign.center,)
               ],
             ),

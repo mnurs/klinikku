@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/config/config.dart';
 import 'package:klinikku/home/home.dart';
 import 'package:klinikku/model/Combobox.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -44,9 +45,24 @@ class _PendaftaranState extends State<Pendaftaran> {
   @override
   void initState() {
     super.initState();
+    if(Config.isAkun){
+      _nomorktpController.text = "330518180000001" ;
+      _namaLengkapController.text = "Irwan Waluyo";
+      _namaPenggilanController.text = "Irwan";
+      _emailController.text = "IrwanWaluyo@gmail.com";
+      _nomorTeleponController.text = "087623422686";
+      _alamatController.text = "Surakarta, Jawa Tengah";
+      _agama = new Combobox("Islam","islam");
+      _pekerjaan = new Combobox("Supir","Supir");
+      _tempatLahir = new Combobox("Jakarta","Jakarta");
+      _kota = new Combobox("Jakarta","Jakarta");
+      setState(() { });
+    }
   }
 
   saveOrUpdate() async {
+    Config.isLogin = true;
+    setState(() {});
     await Alert(context: context, title: "Success",type:AlertType.info, desc: "Berhasil Daftar").show();
     Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:klinikku/home/slider.dart';
 import 'package:klinikku/produk/kategori.dart';
+import 'package:klinikku/produk/promo.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -50,6 +51,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: [
         SliderPage(),
+        Container(),
+        PromoProduk(),
         // Pesan(),
         // Promo(),
         KategoriProduk()

@@ -514,8 +514,9 @@ class _KonfirmasiPembayaranState extends State<KonfirmasiPembayaran> {
                     FlatButton(
                         color: Colors.pink[200],
                         textColor: Colors.white,
-                        onPressed:(){
-                            KonfirmasiPembayaran();
+                        onPressed:() async {
+                          await Alert(context: context, title: "Success",type:AlertType.info, desc: "Berhasil Konfirmasi Pembayaran").show();
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                         },
                         child: Text("KIRIM")
                     )

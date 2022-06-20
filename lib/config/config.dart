@@ -6,6 +6,8 @@ class Config{
   static String StatusDikirim = "Dikirim";
   static String StatusSelesai = "Selesai";
   static String StatusDibatalkan = "Dibatalkan";
+  static bool isLogin = false;
+  static bool isAkun = false;
 
   static String KeteranganBelumBayar(
       String waktuBayar, String namaBank, String waktuPesanan) {

@@ -17,7 +17,7 @@ class Checkout extends StatefulWidget {
 class _CheckoutState extends State<Checkout> {
   int _jumlahProduk = 0;
   double subTotal = 0;
-  double _grandTotal = 0;
+  double _grandTotal = 150562;
   double totalBerat = 0;
   double _diskon = 0;
 
@@ -38,18 +38,23 @@ class _CheckoutState extends State<Checkout> {
   Combobox _comboboxCabang = new Combobox("Pekalongan","PK");
   List<Combobox> _listCabang = [new Combobox("Pekalongan","PK"),new Combobox("Smarang","SN"),new Combobox("Solo","SL")];
 
-  List diskonProduk = [0];
-  List namaProduk = ["Day Cream"];
-  List hargaProduks = ["60.000"];
-  List hargaDiskonProduk = ["0"];
-  List gambarProduk = ["img/produk/1.jpg"];
-  List jumlahProduk = [1];
-  List diskonJasa = [];
-  List namaJasa = [];
-  List hargaJasas = [];
-  List hargaDiskonJasa = [];
-  List gambarJasa = [];
-  List jumlahJasa = [];
+
+  List diskonProduk = [0,10];
+  List namaProduk = ["Day Cream","FACIAL TONER"];
+  List hargaProduks = ["60.000","50.000"];
+  List hargaDiskonProduk = ["0","45.000"];
+  List gambarProduk = ["img/produk/1.jpg","img/produk/2.jpg"];
+  List jumlahProduk = [1,2];
+  List totalProduk = [1,3];
+  List totalBayar = ["60.652","150.534","50.000"];
+
+  List diskonJasa = [10];
+  List namaJasa = ["Konsultasi Umum"];
+  List hargaJasas = ["50.000"];
+  List hargaDiskonJasa = ["45.000"];
+  List gambarJasa = ["img/dokter/2.png"];
+  List jumlahJasa = [1];
+  List totalJasa = [1];
 
   Widget detailAlamatPengiriman(){
     var alamatWilayah = "";
@@ -311,7 +316,7 @@ class _CheckoutState extends State<Checkout> {
                             Container(
                               child: Row(
                                 children: <Widget>[
-                                  Image.network(
+                                  Image.asset(
                                     gambarJasa[index],
                                     fit: BoxFit.fitHeight,
                                     height: MediaQuery.of(context).size.height / 8,
@@ -770,13 +775,13 @@ class _CheckoutState extends State<Checkout> {
               new Padding(
                 padding: EdgeInsets.only(left: 10.0),
               ),
-              new Text("Sub total (2 items)"),
+              new Text("Sub total (4 items)"),
               Expanded(
                 child: new SizedBox(
                   width: 20.0,
                 ),
               ),
-              new Text("60.000"),
+              new Text("150.000"),
               new Padding(
                 padding: EdgeInsets.only(right: 10.0),
               )
@@ -838,7 +843,7 @@ class _CheckoutState extends State<Checkout> {
                 ),
               ),
               new Text(
-                "60.562",
+                "150.562",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0),
@@ -904,7 +909,7 @@ class _CheckoutState extends State<Checkout> {
                   ),
                   Expanded(
                     child: new Text(
-                      _grandTotal.toString(),
+                      "Rp. 150.562",
                       style: TextStyle(
                           color: Colors.orange[400],
                           fontSize: 15.0,
@@ -917,7 +922,7 @@ class _CheckoutState extends State<Checkout> {
                   ),
                 ],
               ),
-              new Text("60.562"),
+              new Text(""),
             ],
           ),
           onTap: () {},

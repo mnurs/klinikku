@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/config/currency_format.dart';
+import 'package:klinikku/history/index.dart';
+import 'package:klinikku/pembayaran/keranjang.dart';
 import 'package:klinikku/pembayaran/konfirmasi.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -1308,7 +1310,7 @@ class _RincianPesananState extends State<RincianPesanan>{
             child: Container(
                 child: FlatButton(
                     onPressed: (){
-                      // Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
                     },
                     color: Colors.pink[200],
                     textColor: Colors.white,
@@ -1595,7 +1597,10 @@ class RadioButtonState extends State<RadioButton> {
             radioKonfirmasiPembatalan("Tidak ingin membeli lagi",6),
             radioKonfirmasiPembatalan("Lainnya",7),
             DialogButton(
-              onPressed: (){},
+              onPressed: () async {
+                await Alert(context: context, title: "Success",type:AlertType.info, desc: "Berhasil Membatalkan Pesanan").show();
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HistoriIndex()));
+              },
               child: Text(
                 "KONFIRMASI",
                 style: TextStyle(color: Colors.white, fontSize: 20),

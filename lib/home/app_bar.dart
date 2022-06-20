@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:klinikku/config/config.dart';
+import 'package:klinikku/pembayaran/keranjang.dart';
 
 class ReusableAppbar {
   static getAppBar(String title, Color? bgColor,BuildContext context){
@@ -13,7 +14,7 @@ class ReusableAppbar {
               width: 30.0,
               child: new GestureDetector(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
                 },
 
                 child: new Stack(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/detail_histori/rincian_pesanan.dart';
+import 'package:klinikku/pembayaran/keranjang.dart';
 
 class Selesai extends StatelessWidget {
 
@@ -288,7 +289,7 @@ class Selesai extends StatelessWidget {
                                                 RaisedButton(
                                                   child: Text("Beli Lagi"),
                                                   onPressed: (){
-                                                    // Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
                                                   },
                                                   color: Colors.pink[200],
                                                   textColor: Colors.white,

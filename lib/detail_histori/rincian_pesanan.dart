@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/config/currency_format.dart';
+import 'package:klinikku/detail_histori/rincian_pembatalan.dart';
 import 'package:klinikku/history/index.dart';
 import 'package:klinikku/pembayaran/keranjang.dart';
 import 'package:klinikku/pembayaran/konfirmasi.dart';
@@ -1288,7 +1289,7 @@ class _RincianPesananState extends State<RincianPesanan>{
             child: Container(
                 child: FlatButton(
                   onPressed: (){
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPembatalan()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => RincianPembatalan()));
                   },
                   child: Text("Rincian Pembatalan",style: TextStyle(color: Colors.pink),),
                   shape: RoundedRectangleBorder(side: BorderSide(

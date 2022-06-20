@@ -2,7 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:klinikku/auth/login.dart';
+import 'package:klinikku/config/config.dart';
 import 'package:klinikku/history/index.dart';
+import 'package:klinikku/register/daftar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DrawerPage extends StatefulWidget {
@@ -65,7 +68,7 @@ class _DrawerPageState extends State<DrawerPage> {
 
   @override
   Widget build(BuildContext context) {
-    if(isLogin){
+    if(Config.isLogin){
       return Scaffold(
         body: ListView(
           // Important: Remove any padding from the ListView.
@@ -133,7 +136,9 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => Pendaftaran(id_pelanggan: StoragePrefix.IdPelanggan,)));
+                Config.isAkun = true;
+                setState(() {});
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Pendaftaran()));
               },
             ),
             ListTile(
@@ -211,7 +216,9 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-
+                Config.isLogin = false;
+                setState(() {});
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
               },
             ),
           ],
@@ -262,7 +269,7 @@ class _DrawerPageState extends State<DrawerPage> {
                         padding: EdgeInsets.only(left: 10.0),
                       ),
                       new Text(
-                        "Muhammad Nur Syafullah",
+                        "",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15.0),
                       )
@@ -284,7 +291,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                Navigator.of(context).pushReplacementNamed("/Login");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
               },
             ),
             ListTile(

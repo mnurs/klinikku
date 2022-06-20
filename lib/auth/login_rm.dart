@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/config/config.dart';
 import 'package:klinikku/home/home.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'dart:async';
@@ -23,6 +24,8 @@ class _LoginRMState extends State<LoginRM> {
 
 
   signIn(String nrm, String tanggal_lahir){
+    Config.isLogin = true;
+    setState(() {});
     Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
@@ -132,6 +135,8 @@ class _LoginRMState extends State<LoginRM> {
                           style: new TextStyle(color: Colors.white),
                         ),
                         onPressed: () {
+                          Config.isAkun = false;
+                          setState(() {});
                           Navigator.push(context, MaterialPageRoute(builder: (context) => Pendaftaran()));
                           // Navigator.of(context).pushReplacementNamed("/Home");
 

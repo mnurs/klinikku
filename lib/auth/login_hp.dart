@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
+import 'package:klinikku/config/config.dart';
 import 'package:klinikku/home/home.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -18,6 +19,8 @@ class _LoginHPState extends State<LoginHP> {
   final phoneNumberValue = TextEditingController();
 
   signIn(String hp, String tanggal_lahir){
+    Config.isLogin = true;
+    setState(() {});
      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
@@ -134,6 +137,8 @@ class _LoginHPState extends State<LoginHP> {
                           style: new TextStyle(color: Colors.white),
                         ),
                         onPressed: () {
+                          Config.isAkun = false;
+                          setState(() {});
                           Navigator.push(context, MaterialPageRoute(builder: (context) => Pendaftaran()));
                         },
                         color: Colors.blue,

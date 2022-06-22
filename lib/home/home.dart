@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:klinikku/home/slider.dart';
+import 'package:klinikku/konsultasi/list_chat.dart';
 import 'package:klinikku/produk/kategori.dart';
 import 'package:klinikku/produk/promo.dart';
 
@@ -51,10 +52,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: [
         SliderPage(),
-        Container(),
+        Pesan(),
         PromoProduk(),
-        // Pesan(),
-        // Promo(),
         KategoriProduk()
       ].elementAt(_selectedTabIndex),
       bottomNavigationBar: SafeArea(

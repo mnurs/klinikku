@@ -22,9 +22,6 @@ class _KonfirmasiPembayaranState extends State<KonfirmasiPembayaran> {
   String transferBank = "";
   ImagePicker _picker = ImagePicker();
   XFile? image;
-  String _IdGambar = "";
-  String _ImageBuktiPembayaran = "";
-//  int kodeUnik = 0;
 
   @override
   void initState() {

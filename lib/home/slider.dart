@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
+import 'package:klinikku/dokter/detail_dokter.dart';
+import 'package:klinikku/dokter/list_dokter.dart';
 import 'package:klinikku/home/app_bar.dart';
 import 'package:klinikku/home/drawer.dart';
 import 'package:klinikku/produk/kategori.dart';
@@ -213,8 +215,8 @@ class _SliderPageState extends State<SliderPage> {
           ),
           InkWell(
             onTap: () {
-              // Navigator.push(context, new MaterialPageRoute(
-              //     builder: (BuildContext context) => new ListDokter()));
+              Navigator.push(context, new MaterialPageRoute(
+                  builder: (BuildContext context) => new ListDokter()));
             },
             child: new Text(
               "Lihat semua",
@@ -233,14 +235,12 @@ class _SliderPageState extends State<SliderPage> {
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {
-              // var route = new MaterialPageRoute(
-              //     builder: (BuildContext context) =>
-              //     new DoctorProfileDetail(
-              //       value: "${doctorData[index]["id_pegawai"]}",
-              //     ));
-              // Navigator.of(context).push(route);
-              //
-              // setState(() {});
+              var route = new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  new DetailDokter());
+              Navigator.of(context).push(route);
+
+              setState(() {});
             },
             child: new Column(
               children: <Widget>[

@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
@@ -33,12 +34,43 @@ class ChatWindow extends State<Chat> with TickerProviderStateMixin {
   XFile? image;
   String prefSender = "";
   String prefChat = "";
-
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+  FlutterLocalNotificationsPlugin();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    var initializationSettingsAndroid = AndroidInitializationSettings('mipmap/ic_launcher');
+    var initializationSettingsIOS = IOSInitializationSettings();
+    var initializationSettings = InitializationSettings(
+        android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
+    flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+    flutterLocalNotificationsPlugin.initialize(initializationSettings,
+        onSelectNotification: (String? payload) async {
+          if (payload != null) {
+            debugPrint('notification payload: $payload');
+          }
+        });
+  }
+
+  Future _showNotification() async {
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+        'Channel id', 'Your notification ID',
+        importance: Importance.defaultImportance,
+        priority: Priority.defaultPriority);
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails();
+    var platformChannelSpecifics = NotificationDetails(
+        android: androidPlatformChannelSpecifics,
+        iOS: iOSPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.show(
+      0,
+      'Notification Alert 🔔',
+      'Message - There is a new notification on your account, kindly check it out',
+      platformChannelSpecifics,
+      payload:
+      'Message - There is a new notification on your account, kindly check it out',
+    );
   }
 
   @override
@@ -286,14 +318,18 @@ class ChatWindow extends State<Chat> with TickerProviderStateMixin {
                 ? new CupertinoButton(
               child: new Text('Submit'),
               onPressed: _isWriting
-                  ? () => {}
+                  ? () => {
+                _showNotification()
+              }
                   // _submitMsg(_textController.text)
                   : null,
             )
                 : new IconButton(
               icon: new Icon(Icons.send),
               onPressed: _isWriting
-                  ? () =>{}
+                  ? () =>{
+                _showNotification()
+              }
                   // _submitMsg(_textController.text)
                   : null,
             ),

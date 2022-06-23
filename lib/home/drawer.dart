@@ -5,6 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:klinikku/auth/login.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/history/index.dart';
+import 'package:klinikku/info/about_us.dart';
+import 'package:klinikku/info/syarat_ketentuan.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -177,7 +179,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                Navigator.of(context).pushNamed("/AboutUs");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutUsIndex()));
               },
             ),
             ListTile(
@@ -190,7 +192,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                Navigator.of(context).pushNamed("/Syarat");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SyaratKetentuanIndex()));
               },
             ),
             ListTile(
@@ -317,7 +319,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                Navigator.of(context).pushNamed("/AboutUs");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutUsIndex()));
               },
             ),
             ListTile(
@@ -330,7 +332,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                Navigator.of(context).pushNamed("/Syarat");
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SyaratKetentuanIndex()));
               },
             ),
             ListTile(

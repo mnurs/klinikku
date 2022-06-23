@@ -11,6 +11,7 @@ import 'package:klinikku/produk/kategori.dart';
 import 'package:klinikku/produk/list.dart';
 import 'package:klinikku/promo/detail.dart';
 import 'package:klinikku/promo/list_promo.dart';
+import 'package:klinikku/treatment/list_tratment.dart';
 
 class SliderPage extends StatefulWidget {
   @override
@@ -281,8 +282,8 @@ class _SliderPageState extends State<SliderPage> {
           ),
           InkWell(
             onTap: () {
-              // Navigator.push(context, new MaterialPageRoute(
-              //     builder: (BuildContext context) => new ListTreatment()));
+              Navigator.push(context, new MaterialPageRoute(
+                  builder: (BuildContext context) => new ListTreatment()));
             },
             child: new Text(
               "Lihat semua",

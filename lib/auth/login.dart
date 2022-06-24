@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:klinikku/auth/login_hp.dart';
 import 'package:klinikku/auth/login_rm.dart';
+import 'package:klinikku/bantuan/bantuan.dart';
 import 'package:klinikku/home/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -34,14 +36,14 @@ class _LoginPageState extends State<LoginPage> {
                 GestureDetector(
                   child: Text("Whatsapp"),
                   onTap: (){
-                    _launchInBrowser();
+                    _launchInBrowser(url());
                   },
                 ),
                 Padding(padding: EdgeInsets.all(8.0),),
                 GestureDetector(
                   child: Text("Aplikasi ini"),
                   onTap: (){
-                    // getDataPegawai(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Bantuan()));
                   },
                 )
               ],
@@ -82,10 +84,27 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
 
   }
+  String url() {
+    if (Platform.isAndroid) {
+      // add the [https]
+      return "https://wa.me/6285219679808/?text=${Uri.parse("Hallo")}"; // new line
+    } else {
+      // add the [https]
+      return "https://api.whatsapp.com/send?phone=6285219679808=${Uri.parse("Hallo")}"; // new line
+    }
+  }
 
-  Future<void> _launchInBrowser() async {
-    final Uri _url = Uri.parse('https://wa.me/6281326369428');
-    if (!await launchUrlString('https://api.whatsapp.com/send/?phone=6281326369428')) throw 'Could not launch $_url';
+  Future<void> _launchInBrowser(String url) async {
+    try {
+      await launch(
+        url,
+        enableJavaScript: true,
+      );
+      // return true;
+    } catch (e) {
+      // log(e.toString());
+      // return false;
+    }
   }
 
   @override

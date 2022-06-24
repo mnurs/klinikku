@@ -1,12 +1,15 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:klinikku/auth/login.dart';
+import 'package:klinikku/bantuan/bantuan.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/history/index.dart';
 import 'package:klinikku/info/about_us.dart';
 import 'package:klinikku/info/syarat_ketentuan.dart';
+import 'package:klinikku/member/card.dart';
 import 'package:klinikku/register/daftar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -24,20 +27,29 @@ class _DrawerPageState extends State<DrawerPage> {
     // TODO: implement initState
     super.initState();
   }
-
-
-  Future<void> _launchInBrowser(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceSafariVC: false,
-        forceWebView: false,
-        headers: <String, String>{'my_header_key': 'my_header_value'},
-      );
+  String url() {
+    if (Platform.isAndroid) {
+      // add the [https]
+      return "https://wa.me/6285219679808/?text=${Uri.parse("Hallo")}"; // new line
     } else {
-      throw 'Could not launch $url';
+      // add the [https]
+      return "https://api.whatsapp.com/send?phone=6285219679808=${Uri.parse("Hallo")}"; // new line
     }
   }
+
+  Future<void> _launchInBrowser(String url) async {
+    try {
+      await launch(
+        url,
+        enableJavaScript: true,
+      );
+      // return true;
+    } catch (e) {
+      // log(e.toString());
+      // return false;
+    }
+  }
+
 
   Future<void> _showChoiceDialog(BuildContext context){
     return
@@ -50,13 +62,14 @@ class _DrawerPageState extends State<DrawerPage> {
                 GestureDetector(
                   child: Text("Whatsapp"),
                   onTap: (){
-                    // _launchInBrowser(String url);
+                    _launchInBrowser(url());
                   },
                 ),
                 Padding(padding: EdgeInsets.all(8.0),),
                 GestureDetector(
                   child: Text("Aplikasi ini"),
                   onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Bantuan()));
                     // getDataPegawai(context);
                   },
                 )

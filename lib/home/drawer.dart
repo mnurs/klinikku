@@ -153,7 +153,7 @@ class _DrawerPageState extends State<DrawerPage> {
                 color: Colors.black,
               ),
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => ViewCard()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MemberCard()));
               },
             ),
             ListTile(

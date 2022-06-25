@@ -44,12 +44,9 @@ class _LoginRMState extends State<LoginRM> {
   }
 
   Widget tampilanLogoLogin(){
-    return Container(
-      padding: EdgeInsets.only(bottom: 70.0, top: 30.0),
-      child:  Text(
-        "KLINIKKU SKINCARE",
-        style: TextStyle(fontSize: 25.0, color: Colors.green[700], fontFamily: 'Century Gothic'),
-      ),
+    return new Image.asset(
+      "img/logo.png",
+      width: 155.0,
     );
   }
 
@@ -178,9 +175,9 @@ class _LoginRMState extends State<LoginRM> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                paddingTop(50),
+                paddingTop(20),
                 tampilanLogoLogin(),
-                paddingTop(40),
+                paddingTop(20),
                 tampilanTulisanLogin(),
                 paddingTop(30),
                 tampilanFormLogin(),

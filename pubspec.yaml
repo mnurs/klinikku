@@ -113,6 +113,7 @@ flutter:
     - img/dokter/2.png
     - img/dokter/3.png
     - example_card12.png
+    - logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

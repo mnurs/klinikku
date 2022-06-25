@@ -43,7 +43,7 @@ class _MemberCardState extends State<MemberCard> {
     }
 
     return Scaffold(
-        appBar:  ReusableAppbar.getAppBar("Auraderma Skin Care",Colors.pink[200],context),
+        appBar:  ReusableAppbar.getAppBar("Klinikki SkinCare",Colors.pink[200],context),
         body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               print('test' + constraints.constrainHeight().toString());

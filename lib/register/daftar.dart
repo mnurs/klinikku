@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:klinikku/auth/login.dart';
 import 'package:klinikku/config/config.dart';
 import 'package:klinikku/home/home.dart';
 import 'package:klinikku/model/Combobox.dart';
@@ -64,7 +65,7 @@ class _PendaftaranState extends State<Pendaftaran> {
     Config.isLogin = true;
     setState(() {});
     await Alert(context: context, title: "Success",type:AlertType.info, desc: "Berhasil Daftar").show();
-    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
   }
 
   @override

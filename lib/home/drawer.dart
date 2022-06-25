@@ -311,19 +311,6 @@ class _DrawerPageState extends State<DrawerPage> {
             ),
             ListTile(
               title: Text(
-                'Artikel',
-                style: TextStyle(color: Colors.black),
-              ),
-              leading: Icon(
-                Icons.featured_play_list,
-                color: Colors.black,
-              ),
-              onTap: () {
-                Navigator.of(context).pushNamed("/Articles");
-              },
-            ),
-            ListTile(
-              title: Text(
                 'About Us',
                 style: TextStyle(color: Colors.black),
               ),

@@ -34,7 +34,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("1. "),
                   Expanded(
                       child: Text(
-                          "Dengan mengakses dan menggunakan semua fitur layanan yang ada di situs ini, Anda dengan otomatis telah menyetujui semua bentuk syarat & ketentuan yang telah ditentukan oleh AuradermA Skin Care Clinic."))
+                          "Dengan mengakses dan menggunakan semua fitur layanan yang ada di situs ini, Anda dengan otomatis telah menyetujui semua bentuk syarat & ketentuan yang telah ditentukan oleh Klinikku SkinCare Clinic."))
                 ],
               ),
               SizedBox(
@@ -64,7 +64,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("3. "),
                   Expanded(
                       child: Text(
-                          "Situs ini dikhususkan bagi orang dewasa. Bagi Anda yang masih di bawah umur diwajibkan untuk memiliki izin/persetujuan dari orang tua/wali yang dapat bertanggungjawab atas tindakan Anda, bertanggungjawab atas biaya yang terkait dengan pembelian produk dan layanan dan penerimaan dan pemahaman mengenai Syarat & Ketentuan yang tertera. Tanpa persetujuan/perizinan tersebut, semua hal yang dilakukan oleh pihak terkait di luar tanggung jawab AuradermA Skin Care Clinic."))
+                          "Situs ini dikhususkan bagi orang dewasa. Bagi Anda yang masih di bawah umur diwajibkan untuk memiliki izin/persetujuan dari orang tua/wali yang dapat bertanggungjawab atas tindakan Anda, bertanggungjawab atas biaya yang terkait dengan pembelian produk dan layanan dan penerimaan dan pemahaman mengenai Syarat & Ketentuan yang tertera. Tanpa persetujuan/perizinan tersebut, semua hal yang dilakukan oleh pihak terkait di luar tanggung jawab Klinikku SkinCare Clinic."))
                 ],
               ),
               SizedBox(
@@ -82,7 +82,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
               Padding(
                 padding: const EdgeInsets.only(left: 18),
                 child: Text(
-                    "Anda setuju untuk mematuhi setiap ketentuan, pemberitahuan, kebijakan dan instruksi yang terkait dengan penggunaan layanan dan/atau akses ke situs ini sesuai dengan ketentuan AuradermA Skin Care Clinic, walau tanpa pemberitahuan lebih lanjut."),
+                    "Anda setuju untuk mematuhi setiap ketentuan, pemberitahuan, kebijakan dan instruksi yang terkait dengan penggunaan layanan dan/atau akses ke situs ini sesuai dengan ketentuan Klinikku SkinCare Clinic, walau tanpa pemberitahuan lebih lanjut."),
               ),
               SizedBox(
                 height: 5,
@@ -143,7 +143,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                     Text("d. "),
                     Expanded(
                       child: Text(
-                          "Mem-posting, mempromosikan atau mengirimkan materi/konten terlarang melalui situs/dengan mengatasnamakan AuradermA Skin Care Clinic tanpa sepengetahuan pihak terkait."),
+                          "Mem-posting, mempromosikan atau mengirimkan materi/konten terlarang melalui situs/dengan mengatasnamakan Klinikku SkinCare Clinic tanpa sepengetahuan pihak terkait."),
                     ),
                   ],
                 ),
@@ -176,7 +176,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
               Padding(
                 padding: const EdgeInsets.only(left: 18),
                 child: Text(
-                    "AuradermA Skin Care Clinic dapat meningkatkan, memodifikasi, menghentikan sementara, menghentikan penyediaan, menghapus, baik secara keseluruhan atau sebagian dari situs atau layanan, tanpa memberikan alasan & pemberitahuan sebelumnya, dan tidak bertanggungjawab jika peningkatan, modifikasi, suspensi atau penghapusan tersebut mencegah Anda mengakses situs atau bagian dari layanan."),
+                    "Klinikku SkinCare Clinic dapat meningkatkan, memodifikasi, menghentikan sementara, menghentikan penyediaan, menghapus, baik secara keseluruhan atau sebagian dari situs atau layanan, tanpa memberikan alasan & pemberitahuan sebelumnya, dan tidak bertanggungjawab jika peningkatan, modifikasi, suspensi atau penghapusan tersebut mencegah Anda mengakses situs atau bagian dari layanan."),
               ),
               SizedBox(
                 height: 5,
@@ -189,7 +189,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   ),
                   Expanded(
                     child: Text(
-                        "7. Pihak AuradermA Skin Care Clinic mempunyai hak penuh atas situs ini termasuk:"),
+                        "7. Pihak Klinikku SkinCare Clinic mempunyai hak penuh atas situs ini termasuk:"),
                   ),
                 ],
               ),
@@ -240,7 +240,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                     Text("d. "),
                     Expanded(
                       child: Text(
-                          "meminta informasi dan data dari Anda sehubungan dengan penggunaan Layanan dan/atau akses situs setiap saat, dan sebagai pelaksanaan hak AuradermA Skin Care Clinic jika Anda menolak untuk memberikan/mengungkapkan informasi/data tersebut, atau jika Anda memberikan informasi tidak akurat, menyesatkan, penipuan data dan/atau informasi, atau jika kami memiliki alasan yang cukup mencurigai Anda telah menyediakan informasi tidak akurat, menyesatkan atau penipuan data dan/atau informasi."),
+                          "meminta informasi dan data dari Anda sehubungan dengan penggunaan Layanan dan/atau akses situs setiap saat, dan sebagai pelaksanaan hak Klinikku SkinCare Clinic jika Anda menolak untuk memberikan/mengungkapkan informasi/data tersebut, atau jika Anda memberikan informasi tidak akurat, menyesatkan, penipuan data dan/atau informasi, atau jika kami memiliki alasan yang cukup mencurigai Anda telah menyediakan informasi tidak akurat, menyesatkan atau penipuan data dan/atau informasi."),
                     ),
                   ],
                 ),
@@ -257,7 +257,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("8. "),
                   Expanded(
                       child: Text(
-                          "Dengan ini Anda telah menyetujui untuk memberikan izin untuk dapat menggunakan informasi yang telah kami terima termasuk tapi tidak terbatas pada, pertanyaan, ulasan, komentar, dan saran. Pihak AuradermA Skin Care Clinic akan mungkin, namun tidak diwajibkan untuk mempublikasikan, menghapus atau mengubah informasi yang telah Anda berikan perihal submisi."))
+                          "Dengan ini Anda telah menyetujui untuk memberikan izin untuk dapat menggunakan informasi yang telah kami terima termasuk tapi tidak terbatas pada, pertanyaan, ulasan, komentar, dan saran. Pihak Klinikku SkinCare Clinic akan mungkin, namun tidak diwajibkan untuk mempublikasikan, menghapus atau mengubah informasi yang telah Anda berikan perihal submisi."))
                 ],
               ),
               SizedBox(
@@ -290,7 +290,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("1. "),
                   Expanded(
                       child: Text(
-                          "Dengan ini, kami menganggap Anda telah menyetujui setiap syarat yang telah ditentukan yang berkaitan dengan pembelian produk dari AuradermA Skin Care Clinic."))
+                          "Dengan ini, kami menganggap Anda telah menyetujui setiap syarat yang telah ditentukan yang berkaitan dengan pembelian produk dari Klinikku SkinCare Clinic."))
                 ],
               ),
               SizedBox(
@@ -305,7 +305,7 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("2. "),
                   Expanded(
                       child: Text(
-                          "Anda menyadari sepenuhnya bahwa produk yang kami jual tidak bersifat permanen, instan ataupun 100% akurat. Kami tetap menyarankan adanya konsultasi apabila ditemukan adanya ketidak-cocokan terhadap produk AuradermA Skin Care Clinic."))
+                          "Anda menyadari sepenuhnya bahwa produk yang kami jual tidak bersifat permanen, instan ataupun 100% akurat. Kami tetap menyarankan adanya konsultasi apabila ditemukan adanya ketidak-cocokan terhadap produk Klinikku SkinCare Clinic."))
                 ],
               ),
               SizedBox(
@@ -350,13 +350,13 @@ class _SyaratKetentuanIndexState extends State<SyaratKetentuanIndex> {
                   Text("5. "),
                   Expanded(
                       child: Text(
-                          "Setiap pembelanjaan yang Anda lakukan harus dilakukan dalam keadaan sadar dan tidak dalam pengaruh apapun.AuradermA Skin Care Clinic tidak bertanggungjawab atas adanya pembelian yang telah/melalui proses terakhir atau pembayaran yang Anda lakukan."))
+                          "Setiap pembelanjaan yang Anda lakukan harus dilakukan dalam keadaan sadar dan tidak dalam pengaruh apapun.Klinikku SkinCare Clinic tidak bertanggungjawab atas adanya pembelian yang telah/melalui proses terakhir atau pembayaran yang Anda lakukan."))
                 ],
               ),
               SizedBox(
                 height: 5,
               ),
-              Text("Pihak AuradermA Skin Care Clinic dapat mengubah/merevisi semua syarat dan ketentuan yang tertera tanpa pemberitahuan terlebih dahulu. Untuk setiap pelanggaran yang dilakukan akan mendapatkan hukuman/sanksi berdasarkan hukum & Undang-undang yang berlaku di Indonesia.")
+              Text("Pihak Klinikku SkinCare Clinic dapat mengubah/merevisi semua syarat dan ketentuan yang tertera tanpa pemberitahuan terlebih dahulu. Untuk setiap pelanggaran yang dilakukan akan mendapatkan hukuman/sanksi berdasarkan hukum & Undang-undang yang berlaku di Indonesia.")
             ],
           ),
         ),
